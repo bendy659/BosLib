@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "ru.benos.boslib.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
