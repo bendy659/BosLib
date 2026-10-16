@@ -15,6 +15,6 @@ object Helper {
 
     fun String.literal(label: String, vararg args: Any): MutableComponent =
         Component.literal(label.format(*args))
-    fun String.translatable(label: String, vararg args: Any): MutableComponent =
-        Component.translatable(label.format(*args))
+    fun String.translatable(vararg args: Any): MutableComponent =
+        Component.translatable(this@translatable.format(*args))
 }

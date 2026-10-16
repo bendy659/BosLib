@@ -7,10 +7,12 @@ import net.neoforged.fml.ModList
 import ru.benos.boslib.BosLibCommon
 
 @Mod(BosLibCommon.MOD_ID)
-class NeoForgeModLoader : IModLoader {
+object NeoForgeModLoader : IModLoader {
     override val name: String = "NeoForge"
     override val isDevelopment: Boolean
         get() = !FMLEnvironment.isProduction()
+    override val isClient: Boolean
+        get() = FMLEnvironment.getDist().isClient
 
     override fun isModLoaded(modId: String): Boolean =
         ModList.get().isLoaded(modId)
